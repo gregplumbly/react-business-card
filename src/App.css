@@ -1,4 +1,4 @@
-/*  https://andy-bell.co.uk/a-modern-css-reset/ */
+/*  Reset from https://andy-bell.co.uk/a-modern-css-reset/ */
 
 /* Box sizing rules */
 *,
@@ -20,6 +20,7 @@ dl,
 dd {
   margin: 0;
 }
+/* End reset */
 
 body {
   /* min-height: 100vh; */
@@ -38,7 +39,7 @@ select {
 
 .container {
   width: 320px;
-  margin: 24px auto;
+  margin: 24px auto 0px;
   /* border: 1px solid #ccc; */
   background: #1a1b21;
   /* min-height: 100vh; */
@@ -52,6 +53,8 @@ select {
 }
 
 h1 {
+  margin-top: 22px;
+  margin-bottom: 6px;
   color: #fff;
   text-align: center;
   font-family: Inter;
@@ -80,29 +83,33 @@ h3 {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 15.36px */
+  margin-bottom: 15px;
 }
 
 h4 {
   color: #f5f5f5;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 24px */
-  margin-left: 30px;
+  margin-left: 36px;
 }
 
 .buttons {
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
+  /* outline: 1px solid red; */
+  margin-bottom: 32px;
 }
 
 button {
-  padding: 8px 24px;
+  padding: 11px 13px 11px 11px;
   /* width: 40%; */
-  margin-top: 8px;
+  /* margin-top: 8px; */
   width: 115px;
+  /* outline: 1px solid red; */
 }
 
 .email {
@@ -134,12 +141,12 @@ button {
 }
 
 p {
-  margin-left: 30px;
+  margin-left: 36px;
   margin-right: 30px;
   color: #fff;
   color: #dcdcdc;
   font-family: Inter;
-  font-size: 10.24px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 15.36px */
@@ -149,29 +156,79 @@ p {
 footer {
   display: flex;
   justify-content: space-between;
-  margin: 0 50px 50px;
+  align-items: center;
+  /* margin-left: 36px; */
+  margin-right: 36px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 52px;
+  border-radius: 0px 0px 10px 10px;
+  background: #161619;
+  height: 64px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 a img {
   width: 25px;
   height: 25px;
-  transition: opacity 0.3s; /* Smooth transition */
-  opacity: 1; /* Fully opaque by default */
+  transition: opacity 0.3s;
+  opacity: 1;
 }
 
 a:hover img {
-  opacity: 0.7; /* Partially transparent on hover */
+  opacity: 0.7;
 }
 
+.email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-700, #374151);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+
+.linkedin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+
+.icon {
+  margin-right: 4px;
+}
+
+a {
+  text-decoration: none; /* Removes underlines */
+  color: inherit; /* Inherits the color from the parent element */
+}
+
+a:hover {
+  text-decoration: none; /* Optionally removes underlines on hover */
+}
+
+/* Wider screens */
 @media screen and (min-width: 601px) {
   .container {
     display: flex;
     flex-direction: row;
-    /* border: 1px solid #ccc; */
+
     width: 620px;
     border-radius: 16px;
+  }
+
+  .buttons {
+    margin-bottom: 0px;
   }
 
   .content {
@@ -190,10 +247,11 @@ a:hover img {
     /* width: 150px; */
     /* padding-left: 10px;
     padding-right: 10px; */
-    margin: 0 20px 10px;
+    /* margin: 0 20px 10px; */
+    margin-bottom: 0px;
   }
 
-  a {
+  footer > a {
     padding: 0 10px;
   }
 
