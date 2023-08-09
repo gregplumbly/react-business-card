@@ -1,23 +1,20 @@
 import React from 'react';
 
 export const Footer = () => {
+  const links = [
+    { href: 'https://www.twitter.com', src: '/images/x.png', alt: 'Twitter' },
+    { href: 'https://www.facebook.com', src: '/images/fb.png', alt: 'Facebook' },
+    { href: 'https://www.instagram.com', src: '/images/insta.png', alt: 'Instagram' },
+    { href: 'https://www.github.com', src: '/images/github.png', alt: 'GitHub' }
+  ];
+
   return (
     <footer>
-      <a href="https://www.twitter.com">
-        <img src="/images/x.png" alt="Description of image" />
-      </a>
-
-      <a href="https://www.facebook.com">
-        <img src="/images/fb.png" alt="Description of image" />
-      </a>
-
-      <a href="https://www.instagram.com">
-        <img src="/images/insta.png" alt="Description of image" />
-      </a>
-
-      <a href="https://www.github.com">
-        <img src="/images/github.png" alt="Description of image" />
-      </a>
+      {links.map((link, index) => (
+        <a key={index} href={link.href}>
+          <img src={link.src} alt={link.alt} />
+        </a>
+      ))}
     </footer>
   );
 };
