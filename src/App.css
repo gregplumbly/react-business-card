@@ -101,11 +101,14 @@ button {
 
 .email,
 .linkedin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 16px; /* 114.286% */
+  line-height: 16px;
   border: none;
   border-radius: 6px;
 }
@@ -118,7 +121,6 @@ button {
 .linkedin {
   color: #fff;
   background: #5093e2;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
   margin-right: 30px;
 }
 
@@ -129,30 +131,6 @@ p {
   font-size: 11px;
   font-weight: 400;
   line-height: 150%;
-}
-
-.email {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--gray-700, #374151);
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px; /* 114.286% */
-}
-
-.linkedin {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px; /* 114.286% */
 }
 
 footer {
@@ -179,8 +157,8 @@ a:hover img {
 }
 
 a {
-  text-decoration: none; /* Removes underlines */
-  color: inherit; /* Inherits color from the parent */
+  text-decoration: none;
+  color: inherit;
 }
 
 @media screen and (min-width: 601px) {
